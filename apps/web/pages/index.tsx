@@ -1,9 +1,11 @@
 import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
+import { BsDot } from "react-icons/bs";
+import { NextPage } from "next";
 
-const HomePage = () => {
+const HomePage: NextPage = () => {
   return (
     <div className="dotted-background h-screen">
-      <header className="max-w-2xl mx-auto px-5 py-40 space-y-6">
+      <header className="max-w-2xl mx-auto px-5 py-48 space-y-6">
         <h1 className="text-2xl leading-relaxed text-center">
           <span className="text-red-500">Iota</span>: A Spacial Journal, Habit
           Tracker, <br />
@@ -25,9 +27,7 @@ const HomePage = () => {
         </div>
         <div className="flex items-center justify-center space-x-2">
           <a className="text-gray-500 hover:underline">Source Code: GitHub</a>
-          <span className="text-2xl leading-none font-bold text-gray-600">
-            ·
-          </span>
+          <BsDot className="text-gray-600 w-6 h-6" />
           <a
             href="https://hack4pan.com"
             className="text-gray-500 hover:underline"

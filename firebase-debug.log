@@ -1,0 +1,115 @@
+[debug] [2022-01-23T04:56:11.516Z] ----------------------------------------------------------------------
+[debug] [2022-01-23T04:56:11.521Z] Command:       /opt/homebrew/Cellar/node/17.2.0/bin/node /opt/homebrew/bin/firebase emulators:start
+[debug] [2022-01-23T04:56:11.521Z] CLI Version:   9.23.0
+[debug] [2022-01-23T04:56:11.521Z] Platform:      darwin
+[debug] [2022-01-23T04:56:11.521Z] Node Version:  v17.2.0
+[debug] [2022-01-23T04:56:11.522Z] Time:          Sat Jan 22 2022 20:56:11 GMT-0800 (Pacific Standard Time)
+[debug] [2022-01-23T04:56:11.523Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-01-23T04:56:11.551Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-01-23T04:56:11.552Z] > authorizing via signed-in user (kevinlu.email@gmail.com)
+[info] i  emulators: Starting emulators: auth, functions, firestore, hosting, pubsub, storage {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: auth, functions, firestore, hosting, pubsub, storage"}}
+[debug] [2022-01-23T04:56:11.576Z] [hub] writing locator at /var/folders/77/6kwnm2px56n2_j7wjt7ctjcr0000gn/T/hub-iota-c14e5.json
+[warn] ⚠  hosting: The hosting emulator is configured but there is no hosting configuration. Have you run firebase init hosting? {"metadata":{"emulator":{"name":"hosting"},"message":"The hosting emulator is configured but there is no hosting configuration. Have you run \u001b[1mfirebase init hosting\u001b[22m?"}}
+[warn] ⚠  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: database, hosting {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mdatabase, hosting\u001b[22m"}}
+[info] ✔  functions: Using node@17 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@17 from host."}}
+[debug] [2022-01-23T04:56:11.607Z] defaultcredentials: writing to file /Users/kevinlu/.config/firebase/kevinlu_email_gmail.com_application_default_credentials.json
+[debug] [2022-01-23T04:56:11.609Z] Setting GAC to /Users/kevinlu/.config/firebase/kevinlu_email_gmail.com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/kevinlu/.config/firebase/kevinlu_email_gmail.com_application_default_credentials.json"}}
+[debug] [2022-01-23T04:56:11.610Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/iota-c14e5/adminSdkConfig [none]
+[debug] [2022-01-23T04:56:11.775Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/iota-c14e5/adminSdkConfig 200
+[debug] [2022-01-23T04:56:11.775Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/iota-c14e5/adminSdkConfig {"projectId":"iota-c14e5","storageBucket":"iota-c14e5.appspot.com","locationId":"us-central"}
+[debug] [2022-01-23T04:56:11.814Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2022-01-23T04:56:11.814Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"firestore"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-01-23T04:56:11.814Z] Starting Firestore Emulator with command {"binary":"java","args":["-Dgoogle.cloud_firestore.debug_log_level=FINE","-Duser.language=en","-jar","/Users/kevinlu/.cache/firebase/emulators/cloud-firestore-emulator-v1.13.1.jar","--host","127.0.0.1","--port",8080,"--rules","/Users/kevinlu/code/iota/firestore.rules","--functions_emulator","127.0.0.1:5001"],"optionalArgs":["port","webchannel_port","host","rules","functions_emulator","seed_from_export"],"joinArgs":false} {"metadata":{"emulator":{"name":"firestore"},"message":"Starting Firestore Emulator with command {\"binary\":\"java\",\"args\":[\"-Dgoogle.cloud_firestore.debug_log_level=FINE\",\"-Duser.language=en\",\"-jar\",\"/Users/kevinlu/.cache/firebase/emulators/cloud-firestore-emulator-v1.13.1.jar\",\"--host\",\"127.0.0.1\",\"--port\",8080,\"--rules\",\"/Users/kevinlu/code/iota/firestore.rules\",\"--functions_emulator\",\"127.0.0.1:5001\"],\"optionalArgs\":[\"port\",\"webchannel_port\",\"host\",\"rules\",\"functions_emulator\",\"seed_from_export\"],\"joinArgs\":false}"}}
+[info] i  firestore: Firestore Emulator logging to firestore-debug.log {"metadata":{"emulator":{"name":"firestore"},"message":"Firestore Emulator logging to \u001b[1mfirestore-debug.log\u001b[22m"}}
+[debug] [2022-01-23T04:56:13.157Z] Jan 22, 2022 8:56:13 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start
+INFO: Started WebSocket server on ws://127.0.0.1:56746
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 22, 2022 8:56:13 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketServer start\nINFO: Started WebSocket server on ws://127.0.0.1:56746\n"}}
+[debug] [2022-01-23T04:56:13.167Z] API endpoint: http:// {"metadata":{"emulator":{"name":"firestore"},"message":"API endpoint: http://"}}
+[debug] [2022-01-23T04:56:13.167Z] 127.0.0.1:8080
+If you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:
+
+   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080
+
+Dev App Server is now running.
+
+ {"metadata":{"emulator":{"name":"firestore"},"message":"127.0.0.1:8080\nIf you are using a library that supports the FIRESTORE_EMULATOR_HOST environment variable, run:\n\n   export FIRESTORE_EMULATOR_HOST=127.0.0.1:8080\n\nDev App Server is now running.\n\n"}}
+[debug] [2022-01-23T04:56:14.543Z] Ignoring unsupported arg: projectId {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: projectId"}}
+[debug] [2022-01-23T04:56:14.543Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"pubsub"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-01-23T04:56:14.543Z] Starting Pub/Sub Emulator with command {"binary":"/Users/kevinlu/.cache/firebase/emulators/pubsub-emulator-0.1.0/pubsub-emulator/bin/cloud-pubsub-emulator","args":["--host=127.0.0.1","--port=8085"],"optionalArgs":["port","host"],"joinArgs":true} {"metadata":{"emulator":{"name":"pubsub"},"message":"Starting Pub/Sub Emulator with command {\"binary\":\"/Users/kevinlu/.cache/firebase/emulators/pubsub-emulator-0.1.0/pubsub-emulator/bin/cloud-pubsub-emulator\",\"args\":[\"--host=127.0.0.1\",\"--port=8085\"],\"optionalArgs\":[\"port\",\"host\"],\"joinArgs\":true}"}}
+[info] i  pubsub: Pub/Sub Emulator logging to pubsub-debug.log {"metadata":{"emulator":{"name":"pubsub"},"message":"Pub/Sub Emulator logging to \u001b[1mpubsub-debug.log\u001b[22m"}}
+[debug] [2022-01-23T04:56:14.665Z] This is the Google Pub/Sub fake.
+Implementation may be incomplete or differ from the real system.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"This is the Google Pub/Sub fake.\nImplementation may be incomplete or differ from the real system.\n"}}
+[debug] [2022-01-23T04:56:14.691Z] Jan 22, 2022 8:56:14 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Jan 22, 2022 8:56:14 PM com.google.cloud.pubsub.testing.v1.Main main\nINFO: IAM integration is disabled. IAM policy methods and ACL checks are not supported\n"}}
+[debug] [2022-01-23T04:56:14.961Z] Jan 22, 2022 8:56:14 PM io.gapi.emulators.netty.NettyUtil applyJava7LongHostnameWorkaround
+INFO: Unable to apply Java 7 long hostname workaround.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Jan 22, 2022 8:56:14 PM io.gapi.emulators.netty.NettyUtil applyJava7LongHostnameWorkaround\nINFO: Unable to apply Java 7 long hostname workaround.\n"}}
+[debug] [2022-01-23T04:56:15.007Z] Jan 22, 2022 8:56:15 PM com.google.cloud.pubsub.testing.v1.Main main
+INFO: Server started, listening on 8085
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Jan 22, 2022 8:56:15 PM com.google.cloud.pubsub.testing.v1.Main main\nINFO: Server started, listening on 8085\n"}}
+[debug] [2022-01-23T04:56:15.072Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"storage"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-01-23T04:56:15.141Z] Jan 22, 2022 8:56:15 PM io.gapi.emulators.grpc.GrpcServer$3 operationComplete
+INFO: Adding handler(s) to newly registered Channel.
+ {"metadata":{"emulator":{"name":"pubsub"},"message":"Jan 22, 2022 8:56:15 PM io.gapi.emulators.grpc.GrpcServer$3 operationComplete\nINFO: Adding handler(s) to newly registered Channel.\n"}}
+[debug] [2022-01-23T04:56:15.258Z] Temp file directory for storage emulator: /var/folders/77/6kwnm2px56n2_j7wjt7ctjcr0000gn/T/firebase/storage/blobs {"metadata":{"emulator":{"name":"storage"},"message":"Temp file directory for storage emulator: /var/folders/77/6kwnm2px56n2_j7wjt7ctjcr0000gn/T/firebase/storage/blobs"}}
+[warn] ⚠  hosting: The hosting emulator is configured but there is no hosting configuration. Have you run firebase init hosting? {"metadata":{"emulator":{"name":"hosting"},"message":"The hosting emulator is configured but there is no hosting configuration. Have you run \u001b[1mfirebase init hosting\u001b[22m?"}}
+[debug] [2022-01-23T04:56:15.942Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-01-23T04:56:15.942Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-01-23T04:56:15.943Z] Starting Emulator UI with command {"binary":"node","args":["/Users/kevinlu/.cache/firebase/emulators/ui-v1.6.4/server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"/Users/kevinlu/.cache/firebase/emulators/ui-v1.6.4/server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-01-23T04:56:16.089Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "/Users/kevinlu/code/iota/apps/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/kevinlu/code/iota/apps/functions\" for Cloud Functions..."}}
+[debug] [2022-01-23T04:56:16.218Z] [worker-pool] addWorker(~diagnostic~) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(~diagnostic~)"}}
+[debug] [2022-01-23T04:56:16.218Z] [worker-pool] Adding worker with key ~diagnostic~, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key ~diagnostic~, total=1"}}
+[debug] [2022-01-23T04:56:16.219Z] [worker-pool] submitWork(triggerId=) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=)"}}
+[debug] [2022-01-23T04:56:16.219Z] [worker-~diagnostic~-12fe85a6-d7cd-4f0d-abd5-e712fdd1a7ee]: Assigning socketPath: /var/folders/77/6kwnm2px56n2_j7wjt7ctjcr0000gn/T/fire_emu_52437.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-12fe85a6-d7cd-4f0d-abd5-e712fdd1a7ee]: Assigning socketPath: /var/folders/77/6kwnm2px56n2_j7wjt7ctjcr0000gn/T/fire_emu_52437.sock"}}
+[debug] [2022-01-23T04:56:16.219Z] [worker-~diagnostic~-12fe85a6-d7cd-4f0d-abd5-e712fdd1a7ee]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-12fe85a6-d7cd-4f0d-abd5-e712fdd1a7ee]: BUSY"}}
+[debug] [2022-01-23T04:56:16.308Z] [runtime-status] [52437] Functions runtime initialized. {"cwd":"/Users/kevinlu/code/iota/apps/functions","node_version":"17.2.0"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [52437] Functions runtime initialized. {\"cwd\":\"/Users/kevinlu/code/iota/apps/functions\",\"node_version\":\"17.2.0\"}"}}
+[debug] [2022-01-23T04:56:16.308Z] [runtime-status] [52437] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [52437] Disabled runtime features: undefined"}}
+[debug] [2022-01-23T04:56:16.309Z] [runtime-status] [52437] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.12.0","resolution":"/Users/kevinlu/code/iota/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [52437] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"9.12.0\",\"resolution\":\"/Users/kevinlu/code/iota/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-01-23T04:56:16.311Z] [runtime-status] [52437] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/kevinlu/code/iota/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [52437] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.16.0\",\"resolution\":\"/Users/kevinlu/code/iota/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-01-23T04:56:16.312Z] [runtime-status] [52437] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [52437] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-01-23T04:56:16.313Z] [runtime-status] [52437] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/kevinlu/code/iota/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [52437] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.16.0\",\"resolution\":\"/Users/kevinlu/code/iota/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-01-23T04:56:16.333Z] [runtime-status] [52437] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [52437] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-01-23T04:56:16.333Z] [runtime-status] [52437] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/kevinlu/code/iota/node_modules/firebase-functions/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [52437] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.16.0\",\"resolution\":\"/Users/kevinlu/code/iota/node_modules/firebase-functions/lib/index.js\"}}"}}
+[debug] [2022-01-23T04:56:16.334Z] [runtime-status] [52437] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/kevinlu/code/iota/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [52437] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.16.0\",\"resolution\":\"/Users/kevinlu/code/iota/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-01-23T04:56:16.334Z] [runtime-status] [52437] Resolved module firebase-admin {"declared":true,"installed":true,"version":"9.12.0","resolution":"/Users/kevinlu/code/iota/node_modules/firebase-admin/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [52437] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"9.12.0\",\"resolution\":\"/Users/kevinlu/code/iota/node_modules/firebase-admin/lib/index.js\"}"}}
+[debug] [2022-01-23T04:56:16.335Z] [runtime-status] [52437] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.16.0","resolution":"/Users/kevinlu/code/iota/node_modules/firebase-functions/lib/index.js"} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [52437] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.16.0\",\"resolution\":\"/Users/kevinlu/code/iota/node_modules/firebase-functions/lib/index.js\"}"}}
+[debug] [2022-01-23T04:56:16.335Z] [runtime-status] [52437] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"9.12.0","resolution":"/Users/kevinlu/code/iota/node_modules/firebase-admin/lib/index.js"}} {"metadata":{"emulator":{"name":"functions"},"message":"[runtime-status] [52437] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"9.12.0\",\"resolution\":\"/Users/kevinlu/code/iota/node_modules/firebase-admin/lib/index.js\"}}"}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌────────────────┬──────────────────────────────────┬─────────────────────────────────┐
+│ Emulator       │ Host:Port                        │ View in Emulator UI             │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Authentication │ 127.0.0.1:9099                   │ http://localhost:4000/auth      │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Functions      │ 127.0.0.1:5001                   │ http://localhost:4000/functions │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Firestore      │ 127.0.0.1:8080                   │ http://localhost:4000/firestore │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Hosting        │ Failed to initialize (see above) │                                 │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Pub/Sub        │ 127.0.0.1:8085                   │ n/a                             │
+├────────────────┼──────────────────────────────────┼─────────────────────────────────┤
+│ Storage        │ 127.0.0.1:9199                   │ http://localhost:4000/storage   │
+└────────────────┴──────────────────────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-01-23T04:56:16.338Z] [worker-~diagnostic~-12fe85a6-d7cd-4f0d-abd5-e712fdd1a7ee]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-~diagnostic~-12fe85a6-d7cd-4f0d-abd5-e712fdd1a7ee]: IDLE"}}
+[debug] [2022-01-23T04:56:17.004Z] Jan 22, 2022 8:56:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead
+INFO: Detected non-HTTP/2 connection.
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 22, 2022 8:56:17 PM io.gapi.emulators.netty.HttpVersionRoutingHandler channelRead\nINFO: Detected non-HTTP/2 connection.\n"}}
+[debug] [2022-01-23T04:56:17.143Z] Jan 22, 2022 8:56:17 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel
+INFO: Connected to new websocket client
+ {"metadata":{"emulator":{"name":"firestore"},"message":"Jan 22, 2022 8:56:17 PM com.google.cloud.datastore.emulator.firestore.websocket.WebSocketChannelHandler initChannel\nINFO: Connected to new websocket client\n"}}
