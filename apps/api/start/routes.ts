@@ -28,3 +28,5 @@ Route.get("/github/redirect", async ({ ally }) => {
 // });
 // Route.get("/google/callback", "AuthController.googleCallback");
 Route.get("/github/callback", "AuthController.githubCallback");
+Route.get("/users/me", "AuthController.user");
+Route.post("/logout", "AuthController.logout");
