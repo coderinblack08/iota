@@ -1,18 +1,22 @@
-import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
-import { BsDot } from "react-icons/bs";
 import { NextPage } from "next";
+import { BsDot } from "react-icons/bs";
+import { FaGithub, FaGoogle, FaTwitter } from "react-icons/fa";
+import { getProvider, login } from "../lib/authentication";
 
 const HomePage: NextPage = () => {
   return (
     <div className="dotted-background h-screen">
       <header className="max-w-2xl mx-auto px-5 py-48 space-y-6">
-        <h1 className="text-2xl leading-relaxed text-center">
+        <h1 className="text-xl sm:text-2xl !leading-relaxed text-center">
           <span className="text-red-500">Iota</span>: A Spacial Journal, Habit
-          Tracker, <br />
+          Tracker, <br className="hidden md:block" />
           Personal Site, and Knowledge Base
         </h1>
         <div className="space-y-2 max-w-xl mx-auto">
-          <button className="flex items-center justify-center px-7 py-2.5 rounded-xl w-full border-2 border-gray-700/75 text-gray-500">
+          <button
+            onClick={async () => login(getProvider("google"))}
+            className="flex items-center justify-center px-7 py-2.5 rounded-xl w-full border-2 border-gray-700/75 text-gray-500"
+          >
             <FaGoogle className="mr-3 w-5 h-5" />
             Continue with Google
           </button>
