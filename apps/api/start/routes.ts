@@ -20,6 +20,11 @@
 
 import Route from "@ioc:Adonis/Core/Route";
 
-Route.get("/", async () => {
-  return { hello: "world" };
+Route.get("/github/redirect", async ({ ally }) => {
+  return ally.use("github").redirect();
 });
+// Route.get("/google/redirect", async ({ ally }) => {
+//   return ally.use("google").redirect();
+// });
+// Route.get("/google/callback", "AuthController.googleCallback");
+Route.get("/github/callback", "AuthController.githubCallback");

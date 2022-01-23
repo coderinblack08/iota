@@ -13,13 +13,13 @@ const HomePage: NextPage = () => {
           Personal Site, and Knowledge Base
         </h1>
         <div className="space-y-3 max-w-xl mx-auto">
-          <button
-            onClick={async () => login(getProvider("google"))}
+          <a
+            href="http://localhost:4000/github/redirect"
             className="flex items-center justify-center px-7 py-2.5 rounded-xl w-full border-2 border-gray-700/75 text-gray-500"
           >
             <FaGoogle className="mr-3 w-5 h-5" />
             Continue with Google
-          </button>
+          </a>
           <button className="flex items-center justify-center px-7 py-2.5 rounded-xl w-full border-2 border-gray-700/75 text-gray-500">
             <FaGithub className="mr-3 w-5 h-5" />
             Continue with GitHub

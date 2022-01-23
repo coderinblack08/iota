@@ -6,8 +6,9 @@ export default class UsersSchema extends BaseSchema {
   public async up() {
     this.schema.createTable(this.tableName, (table) => {
       table.increments("id").primary();
-      table.string("email", 255).notNullable();
-      table.string("displayName", 255).notNullable();
+      table.string("email", 255).nullable();
+      table.string("avatar_url").nullable();
+      table.string("display_name", 255).notNullable();
       table.string("username", 255).notNullable().unique();
       table.string("remember_me_token").nullable();
       table.string("google_id").nullable();
