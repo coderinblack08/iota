@@ -1,3 +1,4 @@
+import axios from "axios";
 import {
   GithubAuthProvider,
   GoogleAuthProvider,
@@ -30,6 +31,10 @@ export const login = async (
       socials: {},
       createdAt: serverTimestamp(),
     });
+    const token = await auth.currentUser?.getIdToken();
+    if (token) {
+      await axios.post("/api/login", {}, { headers: { Authorization: token } });
+    }
     Router.push("/workspace");
   } catch (error) {
     console.error(error);

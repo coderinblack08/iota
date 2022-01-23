@@ -15,11 +15,13 @@ const firebaseConfig = {
 
 if (!getApps().length) {
   initializeApp(firebaseConfig);
-  connectAuthEmulator(getAuth(), "http://localhost:9099", {
-    disableWarnings: true,
-  });
-  connectFirestoreEmulator(getFirestore(), "localhost", 8080);
-  connectStorageEmulator(getStorage(), "localhost", 9199);
+  if (process.env.NODE_ENV === "development") {
+    connectAuthEmulator(getAuth(), "http://localhost:9099", {
+      disableWarnings: true,
+    });
+    connectFirestoreEmulator(getFirestore(), "localhost", 8080);
+    connectStorageEmulator(getStorage(), "localhost", 9199);
+  }
 }
 
 export const auth = getAuth();

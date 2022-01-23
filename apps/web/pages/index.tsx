@@ -12,7 +12,7 @@ const HomePage: NextPage = () => {
           Tracker, <br className="hidden md:block" />
           Personal Site, and Knowledge Base
         </h1>
-        <div className="space-y-2 max-w-xl mx-auto">
+        <div className="space-y-3 max-w-xl mx-auto">
           <button
             onClick={async () => login(getProvider("google"))}
             className="flex items-center justify-center px-7 py-2.5 rounded-xl w-full border-2 border-gray-700/75 text-gray-500"
