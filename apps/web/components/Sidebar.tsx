@@ -16,12 +16,12 @@ export const Sidebar: React.FC<SidebarProps> = ({}) => {
             src={me?.avatar_url}
             alt={me?.display_name}
           />
-          <div>
+          {/* <div>
             <h4>{me?.display_name}</h4>
             <p className="text-gray-500 text-sm">@{me?.username}</p>
-          </div>
+          </div> */}
         </div>
-        <div className="text-gray-500 text-sm uppercase mt-12">Quick Links</div>
+        <div className="text-gray-500 text-sm uppercase mt-10">Quick Links</div>
         <ul className="space-y-4 mt-4">
           <li>
             <a>My Workspace</a>
@@ -40,7 +40,7 @@ export const Sidebar: React.FC<SidebarProps> = ({}) => {
           </li>
         </ul>
       </div>
-      <pre className="text-gray-600">
+      <div className="text-gray-600">
         * GitHub
         <br />
         * Contribute
@@ -49,7 +49,7 @@ export const Sidebar: React.FC<SidebarProps> = ({}) => {
         Iota App.
         <br />
         Made by @coderinblack
-      </pre>
+      </div>
     </nav>
   );
 };

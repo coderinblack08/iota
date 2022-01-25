@@ -33,12 +33,12 @@ const HomePage: NextPage = () => {
           <a className="text-gray-500 hover:underline">Source Code: GitHub</a>
           <BsDot className="text-gray-600 w-6 h-6" />
           <a
-            href="https://hack4pan.com"
+            href="https://twitter.com/coderinblack"
             className="text-gray-500 hover:underline"
             rel="noreferrer"
             target="_blank"
           >
-            Built for Hack4Pan
+            Built by Kevin
           </a>
         </div>
       </header>

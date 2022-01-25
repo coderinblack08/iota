@@ -9,11 +9,21 @@
   src: url(/fonts/JetBrainsMono.ttf) format("ttf");
 }
 
+html {
+  overflow: hidden;
+  height: 100%;
+}
+
+body {
+  overflow: auto;
+  height: 100%;
+}
+
 @layer base {
   .dotted-background {
     background-image: radial-gradient(
-      theme("colors.gray.800") 12%,
-      theme("colors.gray.900") 12%
+      theme("colors.gray.800") 10%,
+      theme("colors.gray.900") 10%
     );
     background-position: 0 0;
     background-size: 1.75rem 1.75rem;
@@ -21,6 +31,10 @@
   html,
   body {
     @apply bg-gray-900 text-gray-300;
+    overscroll-behavior-x: contain;
     font-family: "JetBrains Mono";
+  }
+  .btn {
+    @apply flex items-center px-5 py-2 rounded-xl border-2 border-gray-800 text-gray-500;
   }
 }
