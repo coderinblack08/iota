@@ -7,7 +7,19 @@ export enum BlockType {
 }
 
 export interface Block {
+  id?: string;
   type?: BlockType;
-  position: { x: number; y: number };
-  size: { width: number; height: number };
+  position: BlockPosition;
+  size: BlockSize;
+  text: string;
+}
+
+export interface BlockPosition {
+  x: number;
+  y: number;
+}
+
+export interface BlockSize {
+  width: number;
+  height: number;
 }

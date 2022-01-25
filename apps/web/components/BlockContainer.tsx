@@ -7,6 +7,7 @@ import {
   IconLink,
 } from "@tabler/icons";
 import React, { useEffect, useRef, useState } from "react";
+import { BlockComponent } from "./Block";
 import { GridCanvas } from "./BlockGridCanvas";
 
 export const BlockContainer: React.FC = ({ children }) => {
@@ -42,9 +43,8 @@ export const BlockContainer: React.FC = ({ children }) => {
   return (
     <div
       ref={containerRef}
-      className="w-full h-screen overflow-hidden min-height-screen"
+      className="w-full h-screen overflow-hidden min-height-screen notes-container"
       onWheel={(e) => {
-        e.preventDefault();
         e.stopPropagation();
         setViewPosition((prev) => ({
           x: prev.x - e.deltaX,
@@ -58,59 +58,17 @@ export const BlockContainer: React.FC = ({ children }) => {
         }}
       >
         {blocks.map((block: any, index) => (
-          <div
+          <BlockComponent
+            boundClassName="blocks-container"
+            gridSize={20}
+            id={index}
             key={index}
-            className="flex flex-col absolute border-2 border-gray-700 rounded-xl bg-gray-900"
-            style={{
-              top: block.position.y,
-              left: block.position.x,
-              width: block.size.width,
-              height: block.size.height,
-            }}
-          >
-            <header className="cursor-grab px-3 py-1 border-b-2 border-gray-700">
-              <button
-                onClick={() => setBlocks(blocks.filter((_, i) => i != index))}
-                className="rounded-full w-3 h-3 border-2 border-gray-700"
-              />
-            </header>
-            {/* <textarea
-              className="p-4 placeholder:text-gray-600 bg-transparent w-full h-full resize-none focus:outline-none"
-              placeholder="What's on your mind?"
-            /> */}
-            <div
-              className={`p-4 grid gap-4 overflow-y-auto ${
-                block.size.width > 480 ? "grid-cols-2" : "grid-cols-1"
-              }`}
-              onWheel={(e) => e.stopPropagation()}
-            >
-              <button className="btn">
-                <IconNotes className="w-6 h-6 mr-2.5 text-gray-700" />
-                Note Block
-              </button>
-              <button className="btn">
-                <IconMessages className="w-6 h-6 mr-2.5 text-gray-700" />
-                Chat Block
-              </button>
-              <button className="btn">
-                <IconPhoto className="w-6 h-6 mr-2.5 text-gray-700" />
-                Image Block
-              </button>
-              <button className="btn">
-                <IconFolder className="w-6 h-6 mr-2.5 text-gray-700" />
-                Album Block
-              </button>
-              <button className="btn">
-                <IconNotebook className="w-6 h-6 mr-2.5 text-gray-700" />
-                Journal Block
-              </button>
-              <button className="btn">
-                <IconLink className="w-6 h-6 mr-2.5 text-gray-700" />
-                Link Block
-              </button>
-              <div className="absolute -bottom-[2px] -right-[2px] w-5 h-5 border-2 border-gray-700 rounded-br-xl rounded-tl-md cursor-se-resize" />
-            </div>
-          </div>
+            block={block}
+            onChange={(id, data) =>
+              setBlocks((prev) => prev.map((b) => (b.id === id ? data : b)))
+            }
+            onDelete={(id) => setBlocks(blocks.filter((_, i) => i != id))}
+          />
         ))}
       </div>
       <GridCanvas
