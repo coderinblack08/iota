@@ -35,6 +35,6 @@ body {
     font-family: "JetBrains Mono";
   }
   .btn {
-    @apply flex items-center px-5 py-2 rounded-xl border-2 border-gray-800 text-gray-500;
+    @apply flex items-center px-5 py-2 rounded-xl bg-gray-800 text-gray-500;
   }
 }

@@ -1,11 +1,3 @@
-import {
-  IconNotes,
-  IconMessages,
-  IconPhoto,
-  IconFolder,
-  IconNotebook,
-  IconLink,
-} from "@tabler/icons";
 import React, { useEffect, useRef, useState } from "react";
 import { BlockComponent } from "./Block";
 import { GridCanvas } from "./BlockGridCanvas";
@@ -64,9 +56,14 @@ export const BlockContainer: React.FC = ({ children }) => {
             id={index}
             key={index}
             block={block}
-            onChange={(id, data) =>
-              setBlocks((prev) => prev.map((b) => (b.id === id ? data : b)))
-            }
+            onChange={(id, data) => {
+              console.log(data);
+              setBlocks((prev) => {
+                const newBlocks = [...prev];
+                newBlocks[id] = data;
+                return newBlocks;
+              });
+            }}
             onDelete={(id) => setBlocks(blocks.filter((_, i) => i != id))}
           />
         ))}

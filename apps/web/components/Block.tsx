@@ -70,12 +70,24 @@ export const BlockComponent: React.FC<BlockProps> = ({
     <Rnd
       size={{ width: block.size.width, height: block.size.height }}
       position={{ y: block.position.y, x: block.position.x }}
+      // default={{
+      //   width: block.size.width,
+      //   height: block.size.height,
+      //   y: block.position.y,
+      //   x: block.position.x,
+      // }}
+      default={{
+        x: 0,
+        y: 0,
+        width: 320,
+        height: 200,
+      }}
       minWidth={340}
       minHeight={340}
       resizeGrid={[gridSize, gridSize]}
       dragGrid={[gridSize, gridSize]}
       dragHandleClassName="drag-header"
-      bounds={`.${boundClassName}`}
+      // bounds={`.${boundClassName}`}
       enableResizing={{
         bottom: false,
         bottomLeft: false,
